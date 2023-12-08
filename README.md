@@ -211,3 +211,15 @@ Obs: Nenhum parâmetro é **Obrigatório**, os parâmetros não enviados não se
 ```http
   GET /licao-menos-frequente
 ```
+
+### Encontrar escolas por cidade
+
+```http
+  GET /escolas_cidade
+```
+
+No corpo da requisição deverão ser passados os seguintes campos no formato **raw - JSON**:
+
+| Campo   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `cidade`| `string`  | **Obrigatório**. Cidade onde a escola está localizada|
