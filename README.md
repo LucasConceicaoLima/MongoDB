@@ -82,7 +82,7 @@ No corpo da requisição deverão ser passados os seguintes parâmetros a serem 
 | `frente`| `string`  | **Obrigatório**. Conteúdo da parte frontal do flashcard|
 | `verso`| `string`   | **Obrigatório**. Conteúdo da parte posterior do flashcard|
 
-Obs: Nenhum parâmetro é **Obrigatório**, os parâmetros não enviados não serão alterados.
+Obs: Nenhum parâmetro é **Obrigatório**, os parâmetros não enviados não serão alterados. Os campos de atualização devem ser enviados no formato **raw - JSON**.
 
 ### Remover um flashcard pelo ID
 
@@ -135,7 +135,7 @@ Obs: enviar parâmetros no corpo da requisição no formato **raw - JSON**
 | `numero`| `string`   | Número da localização da escola|
 | `presencial`| `boolean`  | Indica se a escola possui formato presencial de estudos|
 
-Obs: Nenhum parâmetro é **Obrigatório**, os parâmetros não enviados não serão alterados.
+Obs: Nenhum parâmetro é **Obrigatório**, os parâmetros não enviados não serão alterados. Os campos de atualização devem ser enviados no formato **raw - JSON**.
 
 ### Remover uma escola pelo ID
 
@@ -180,7 +180,7 @@ Obs: enviar parâmetros no corpo da requisição no formato **raw - JSON**
 | `titulo`| `string`   | Título da lição|
 | `frequencia`| `number`  | Indicador de utilização da lição no idioma (0-10, sendo 0 para menos comum e 10 para mais comum)|
 
-Obs: Nenhum parâmetro é **Obrigatório**, os parâmetros não enviados não serão alterados.
+Obs: Nenhum parâmetro é **Obrigatório**, os parâmetros não enviados não serão alterados. Os campos de atualização devem ser enviados no formato **raw - JSON**.
 
 
 ### Remover uma lição pelo ID
