@@ -1,5 +1,7 @@
 # MongoDB - Trabalho final
 
+Testado utilizando MongoDBCompass e Postman.
+
 ## Lista de endpoints
 
 ### Mostrar todos os flashcards
@@ -196,3 +198,16 @@ Obs: Nenhum parâmetro é **Obrigatório**, os parâmetros não enviados não se
 | Parâmetros   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
 | `id`| `number`   | **Obrigatório**. Identificador da lição, valor do campo `_id` no banco|
+
+
+### Encontrar a lição com utilização mais frequente no idioma
+
+```http
+  GET /licao-mais-frequente
+```
+
+### Encontrar a lição com utilização menos frequente no idioma
+
+```http
+  GET /licao-menos-frequente
+```
