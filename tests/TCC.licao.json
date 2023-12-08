@@ -1,0 +1,24 @@
+[{
+  "_id": 1,
+  "conteudo": " Verbos de Grupo 1: Adiciona ている ao final do radical do verbo. Exemplo: 食べる (taberu) → 食べている (tabeteiru) - Estou comendo. Verbos de Grupo 2: Substitui o る final por ている. Exemplo: 見る (miru) → 見ている (miteiru) - Estou vendo. Verbos Irregulares: Cada verbo irregular tem sua própria forma.",
+  "descricao": "A forma ている (Teiru) é usada para expressar uma ação contínua no presente. Essa estrutura é frequentemente utilizada para descrever atividades em andamento.",
+  "nivel": "N5",
+  "titulo": "Ação Contínua com ている (Teiru)",
+  "frequencia": 6
+},
+{
+  "_id": 2,
+  "conteudo": "Adiciona ないでください ao final do verbo na forma negativa. Exemplo: 食べる (taberu) → 食べないでください (tabenai de kudasai) - Por favor, não coma.",
+  "descricao": "Esta estrutura é utilizada para fazer pedidos ou expressar proibições de maneira educada. É uma construção comum para interações cotidianas.",
+  "nivel": "N4",
+  "titulo": "Pedido ou Proibição com ないでください (Naide Kudasai)",
+  "frequencia": 8
+},
+{
+  "_id": 3,
+  "conteudo": "Adiciona ました ao final do verbo na forma de dicionário. Exemplo: 飲む (nomu) → 飲みました (nomimashita) - Bebi.",
+  "descricao": "Esta estrutura é utilizada para indicar atos que já ocorreram. É uma construção comum para interações cotidianas.",
+  "nivel": "N5",
+  "titulo": "Conjugação de tempo passado com ました (Mashita)",
+  "frequencia": 10
+}]

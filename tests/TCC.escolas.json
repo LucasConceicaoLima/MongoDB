@@ -1,0 +1,60 @@
+[{
+  "_id": 1,
+  "cidade": "Pelotas",
+  "complemento": "Apt 308",
+  "endereco": "Rua Almirante Tamandaré",
+  "estado": "Rio Grande do Sul",
+  "facebook": "/renatapeil",
+  "instagram": "@escolajaponeskawabe",
+  "nome": "Escola Kawabe",
+  "numero": "505",
+  "presencial": true
+},
+{
+  "_id": 2,
+  "cidade": "Arroio Grande",
+  "complemento": "Edifício Hanabira, 3º andar",
+  "endereco": "Basílio Conceição",
+  "estado": "Rio Grande do Sul",
+  "facebook": "/SakuraNihongoGakko",
+  "instagram": "@sakura.nihongo",
+  "nome": "Sakura Nihongo Gakko",
+  "numero": "207",
+  "presencial": true
+},
+{
+  "_id": 3,
+  "cidade": "Cidade Fictícia 1",
+  "complemento": "Complemento Fictício 1",
+  "endereco": "Endereço Fictício 1",
+  "estado": "Estado Fictício 1",
+  "facebook": "/PaginaFicticia1",
+  "instagram": "@instagramficticio1",
+  "nome": "Escola Fictícia 1",
+  "numero": "123",
+  "presencial": false
+},
+{
+  "_id": 4,
+  "cidade": "Cidade Fictícia 2",
+  "complemento": "Complemento Fictício 2",
+  "endereco": "Endereço Fictício 2",
+  "estado": "Estado Fictício 2",
+  "facebook": "/PaginaFicticia2",
+  "instagram": "@instagramficticio2",
+  "nome": "Escola Fictícia 2",
+  "numero": "456",
+  "presencial": false
+},
+{
+  "_id": 5,
+  "cidade": "Cidade Fictícia 3",
+  "complemento": "Complemento Fictício 3",
+  "endereco": "Endereço Fictício 3",
+  "estado": "Estado Fictício 3",
+  "facebook": "/PaginaFicticia3",
+  "instagram": "@instagramficticio3",
+  "nome": "Escola Fictícia 3",
+  "numero": "789",
+  "presencial": true
+}]

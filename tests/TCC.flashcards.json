@@ -1,0 +1,25 @@
+[{
+  "_id": 2,
+  "frente": "自転車",
+  "verso": "jitensha - bicicleta"
+},
+{
+  "_id": 3,
+  "frente": "公園",
+  "verso": "kouen - parque"
+},
+{
+  "_id": 4,
+  "frente": "車",
+  "verso": "kuruma - carro"
+},
+{
+  "_id": 5,
+  "frente": "髪",
+  "verso": "kami - cabelo"
+},
+{
+  "_id": 6,
+  "frente": "山",
+  "verso": "yama - montanha"
+}]
