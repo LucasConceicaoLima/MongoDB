@@ -77,12 +77,13 @@ Obs: enviar parâmetros no corpo da requisição no formato **raw-JSON**
 | `id`| `number`   | **Obrigatório**. Identificador do flashcard, valor do campo `_id` no banco|
 
 No corpo da requisição deverão ser passados os seguintes parâmetros a serem atualizados no formato **raw - JSON**:
+
 | Campo   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
 | `frente`| `string`  | **Obrigatório**. Conteúdo da parte frontal do flashcard|
 | `verso`| `string`   | **Obrigatório**. Conteúdo da parte posterior do flashcard|
 
-Obs: Nenhum parâmetro é **Obrigatório**, os parâmetros não enviados não serão alterados. Os campos de atualização devem ser enviados no formato **raw - JSON**.
+Obs: Nenhum parâmetro é **Obrigatório**, os parâmetros não enviados não serão alterados. 
 
 ### Remover um flashcard pelo ID
 
@@ -123,6 +124,8 @@ Obs: enviar parâmetros no corpo da requisição no formato **raw - JSON**
 | :---------- | :--------- | :------------------------------------------ |
 | `id`| `number`   | **Obrigatório**. Identificador do flashcard, valor do campo `_id` no banco|
 
+No corpo da requisição deverão ser passados os seguintes parâmetros a serem atualizados no formato **raw - JSON**:
+
 | Campo   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
 | `cidade`| `string`  | Cidade onde a escola está localizada|
@@ -135,7 +138,7 @@ Obs: enviar parâmetros no corpo da requisição no formato **raw - JSON**
 | `numero`| `string`   | Número da localização da escola|
 | `presencial`| `boolean`  | Indica se a escola possui formato presencial de estudos|
 
-Obs: Nenhum parâmetro é **Obrigatório**, os parâmetros não enviados não serão alterados. Os campos de atualização devem ser enviados no formato **raw - JSON**.
+Obs: Nenhum parâmetro é **Obrigatório**, os parâmetros não enviados não serão alterados.
 
 ### Remover uma escola pelo ID
 
@@ -171,6 +174,8 @@ Obs: enviar parâmetros no corpo da requisição no formato **raw - JSON**
 | Parâmetros   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
 | `id`| `number`   | **Obrigatório**. Identificador da lição, valor do campo `_id` no banco|
+
+No corpo da requisição deverão ser passados os seguintes parâmetros a serem atualizados no formato **raw - JSON**:
 
 | Campo   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
