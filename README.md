@@ -106,16 +106,16 @@ Parâmetros:
 | Campo   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
 | `cidade`| `string`  | **Obrigatório**. Cidade onde a escola está localizada|
-| `complemento`| `string`   | **Obrigatório**. Complemento do endereço da escola|
+| `complemento`| `string`   | Complemento do endereço da escola|
 | `endereco`| `string`  | **Obrigatório**. Endereço onde a escola está localizada|
 | `estado`| `string`   | **Obrigatório**. Estado onde a escola está localizada|
-| `facebook`| `string`  | **Obrigatório**. Endereço da página web da escola no Facebook|
-| `instagram`| `string`   | **Obrigatório**. Endereço da página web da escola no Instagram|
+| `facebook`| `string`  | Endereço da página web da escola no Facebook|
+| `instagram`| `string`   | Endereço da página web da escola no Instagram|
 | `nome`| `string`  | **Obrigatório**. Nome completo da escola|
 | `numero`| `string`   | **Obrigatório**. Número da localização da escola|
 | `presencial`| `boolean`  | **Obrigatório**. Indica se a escola possui formato presencial de estudos|
 
-Obs: enviar parâmetros no corpo da requisição no formato **raw - JSON**
+Obs: enviar parâmetros no corpo da requisição no formato **raw - JSON**. Campos não obrigatórios são inicializados com o valor null, caso não sejam indicados.
 
 ### Atualizar uma escola pelo ID
 
