@@ -159,7 +159,7 @@ Parâmetros:
 | `descricao`| `string`   | **Obrigatório**. Descrição da lição|
 | `nivel`| `string`  | **Obrigatório**. Nível em que a lição é cobrada na JLPT (N5-N1)|
 | `titulo`| `string`   | **Obrigatório**. Título da lição|
-| `frequencia`| `integer`  | **Obrigatório**. Indicador de utilização da lição no idioma (0-10, sendo 0 para menos comum e 10 para mais comum)|
+| `frequencia`| `number`  | **Obrigatório**. Indicador de utilização da lição no idioma (0-10, sendo 0 para menos comum e 10 para mais comum)|
 
 Obs: enviar parâmetros no corpo da requisição no formato **raw - JSON**
 
@@ -178,7 +178,7 @@ Obs: enviar parâmetros no corpo da requisição no formato **raw - JSON**
 | `descricao`| `string`   | Descrição da lição|
 | `nivel`| `string`  | Nível em que a lição é cobrada na JLPT (N5-N1)|
 | `titulo`| `string`   | Título da lição|
-| `frequencia`| `integer`  | Indicador de utilização da lição no idioma (0-10, sendo 0 para menos comum e 10 para mais comum)|
+| `frequencia`| `number`  | Indicador de utilização da lição no idioma (0-10, sendo 0 para menos comum e 10 para mais comum)|
 
 Obs: Nenhum parâmetro é **Obrigatório**, os parâmetros não enviados não serão alterados.
 
