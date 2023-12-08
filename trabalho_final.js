@@ -77,10 +77,18 @@ app.post('/flashcards', async (req, res) => {
         const db = await connectDB();
         currentIdFlashcards++;
 
+        // Validate if both fields are present and contain at least one non-space character
+        const frente = req.body.frente.trim();
+        const verso = req.body.verso.trim();
+
+        if (!frente || !verso || /^\s*$/.test(frente) || /^\s*$/.test(verso)) {
+            throw new Error('Frente e verso são campos obrigatórios e devem conter pelo menos um caractere que não seja espaço.');
+        }
+
         const newFlashcard = {
             _id: currentIdFlashcards,
-            frente: req.body.frente,
-            verso: req.body.verso,
+            frente,
+            verso,
         };
 
         const result = await db.collection('flashcards').insertOne(newFlashcard);
@@ -90,7 +98,7 @@ app.post('/flashcards', async (req, res) => {
             throw new Error('Erro ao criar flashcard!');
         }
     } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(400).json({ error: error.message });
     }
 });
 
@@ -172,15 +180,27 @@ app.get('/licoes/:id', async (req, res) => {
 app.post('/licoes', async (req, res) => {
     try {
         const db = await connectDB();
-        currentIdLicao++; //incia em 0
+        currentIdLicao++; // começa em 0
+
+        const conteudo = req.body.conteudo.trim();
+        const descricao = req.body.descricao.trim();
+        const nivel = req.body.nivel.trim();
+        const titulo = req.body.titulo.trim();
+        const frequencia = req.body.frequencia.trim();
+
+        if (!conteudo || !descricao || !nivel || !titulo || !frequencia ||
+            /^\s*$/.test(conteudo) || /^\s*$/.test(descricao) || /^\s*$/.test(nivel) ||
+            /^\s*$/.test(titulo) || /^\s*$/.test(frequencia)) {
+            throw new Error('Todos os campos (conteudo, descricao, nivel, titulo, frequencia) são obrigatórios e devem conter pelo menos um caractere que não seja espaço.');
+        }
 
         const newLicao = {
             _id: currentIdLicao,
-            conteudo: req.body.conteudo,
-            descricao: req.body.descricao,
-            nivel: req.body.nivel,
-            titulo: req.body.titulo,
-            frequencia: req.body.frequencia
+            conteudo,
+            descricao,
+            nivel,
+            titulo,
+            frequencia
         };
 
         const result = await db.collection('licao').insertOne(newLicao);
@@ -190,9 +210,10 @@ app.post('/licoes', async (req, res) => {
             throw new Error('Erro ao criar lição!');
         }
     } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(400).json({ error: error.message });
     }
 });
+
 
 // Update licao
 app.put('/licoes/:id', async (req, res) => {
@@ -272,19 +293,32 @@ app.get('/escolas/:id', async (req, res) => {
 app.post('/escolas', async (req, res) => {
     try {
         const db = await connectDB();
-        currentIdEscola++; //incia em 0
+        currentIdEscola++; // começa em 0
+
+        const cidade = req.body.cidade.trim();
+        const endereco = req.body.endereco.trim();
+        const estado = req.body.estado.trim();
+        const nome = req.body.nome.trim();
+        const numero = req.body.numero.trim();
+        const presencial = req.body.presencial.trim();
+
+        if (!cidade || !endereco || !estado || !nome || !numero || !presencial ||
+            /^\s*$/.test(cidade) || /^\s*$/.test(endereco) || /^\s*$/.test(estado) ||
+            /^\s*$/.test(nome) || /^\s*$/.test(numero) || /^\s*$/.test(presencial)) {
+            throw new Error('Os campos cidade, endereco, estado, nome, numero e presencial são obrigatórios e devem conter pelo menos um caractere que não seja espaço.');
+        }
 
         const newEscola = {
             _id: currentIdEscola,
-            cidade: req.body.cidade,
-            complemento: req.body.complemento,
-            endereco: req.body.endereco,
-            estado: req.body.estado,
-            facebook: req.body.facebook,
-            instagram: req.body.instagram,
-            nome: req.body.nome,
-            numero: req.body.numero,
-            presencial: req.body.presencial
+            cidade,
+            endereco,
+            estado,
+            nome,
+            numero,
+            presencial,
+            facebook: req.body.facebook || null, 
+            instagram: req.body.instagram || null,
+            complemento: req.body.complemento || null
         };
 
         const result = await db.collection('escolas').insertOne(newEscola);
@@ -294,9 +328,10 @@ app.post('/escolas', async (req, res) => {
             throw new Error('Erro ao criar escola!');
         }
     } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(400).json({ error: error.message });
     }
 });
+
 
 // Update escola
 app.put('/escolas/:id', async (req, res) => {
