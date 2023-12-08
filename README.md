@@ -145,3 +145,49 @@ Obs: Nenhum parâmetro é **Obrigatório**, os parâmetros não enviados não se
 | Parâmetros   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
 | `id`| `number`   | **Obrigatório**. Identificador da escola, valor do campo `_id` no banco|
+
+### Inserir lição
+
+```http
+  POST /licoes
+```
+Parâmetros:
+
+| Campo   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `conteudo`| `string`  | **Obrigatório**. Conteúdo da lição|
+| `descricao`| `string`   | **Obrigatório**. Descrição da lição|
+| `nivel`| `string`  | **Obrigatório**. Nível em que a lição é cobrada na JLPT (N5-N1)|
+| `titulo`| `string`   | **Obrigatório**. Título da lição|
+| `frequencia`| `integer`  | **Obrigatório**. Indicador de utilização da lição no idioma (0-10, sendo 0 para menos comum e 10 para mais comum)|
+
+Obs: enviar parâmetros no corpo da requisição no formato **raw - JSON**
+
+### Atualizar uma lição pelo ID
+
+```http
+  PUT /licoes/${id}
+```
+| Parâmetros   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`| `number`   | **Obrigatório**. Identificador da lição, valor do campo `_id` no banco|
+
+| Campo   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `conteudo`| `string`  | Conteúdo da lição|
+| `descricao`| `string`   | Descrição da lição|
+| `nivel`| `string`  | Nível em que a lição é cobrada na JLPT (N5-N1)|
+| `titulo`| `string`   | Título da lição|
+| `frequencia`| `integer`  | Indicador de utilização da lição no idioma (0-10, sendo 0 para menos comum e 10 para mais comum)|
+
+Obs: Nenhum parâmetro é **Obrigatório**, os parâmetros não enviados não serão alterados.
+
+
+### Remover uma lição pelo ID
+
+```http
+  DELETE /licoes/${id}
+```
+| Parâmetros   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`| `number`   | **Obrigatório**. Identificador da lição, valor do campo `_id` no banco|
