@@ -223,3 +223,18 @@ No corpo da requisição deverão ser passados os seguintes campos no formato **
 | Campo   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
 | `cidade`| `string`  | **Obrigatório**. Cidade onde a escola está localizada|
+
+### Encontrar lições com base na frequência de utilização (menos utilizada - mais utilizada)
+
+```http
+  GET /licoes-frequencia/
+```
+
+No corpo da requisição deverão ser passados os seguintes campos no formato **raw - JSON**:
+
+| Campo   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `min`| `string`  | **Obrigatório**. Valor mínimo|
+| `max`| `string`  | **Obrigatório**. Valor máximo|
+
+Obs: a pesquisa retorna todas as lições com frequência >= min E <= max.
